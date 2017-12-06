@@ -16,5 +16,9 @@ GET       /                           controllers.ApiDocsController.redirectToDo
 GET       /swagger.json               controllers.ApiHelpController.getResources
 GET       /api-docs                   controllers.ApiDocsController.redirectToDocs
 
+# Bio endpoints #
+GET      /bios                         controllers.BiosController.getAllBios
+GET      /awards-by-years              controllers.BiosController.getAwardsByYears(year: Option[Int])
+
 # Map static resources from the /public folder to the /assets URL path
 GET       /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
